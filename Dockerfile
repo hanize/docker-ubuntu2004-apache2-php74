@@ -10,9 +10,11 @@ RUN apt -y install git
 
 RUN apt -y install iproute2
 
+RUN apt -y install redis-server
+
 RUN apt -y install apache2 software-properties-common vim
 
-RUN apt -y install libapache2-mod-php php7.4-cli php7.4-fpm php7.4-bcmath php7.4-bz2 php7.4-common php7.4-curl php7.4-dba php7.4-gd php7.4-json php7.4-mbstring php7.4-opcache php7.4-readline php7.4-soap php7.4-xml php7.4-xmlrpc php7.4-zip php7.4-ctype php7.4-pdo php7.4-redis php7.4-mysql php7.4-imagick php7.4-intl
+RUN apt -y install libapache2-mod-php php-redis php7.4-cli php7.4-fpm php7.4-bcmath php7.4-bz2 php7.4-common php7.4-curl php7.4-dba php7.4-gd php7.4-json php7.4-mbstring php7.4-opcache php7.4-readline php7.4-soap php7.4-xml php7.4-xmlrpc php7.4-zip php7.4-ctype php7.4-pdo php7.4-redis php7.4-mysql php7.4-imagick php7.4-intl
 
 RUN a2enmod rewrite
 
