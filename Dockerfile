@@ -15,6 +15,9 @@ RUN apt-get -y install libapache2-mod-php php-redis php7.4-cli php7.4-bcmath php
 
 RUN a2enmod rewrite
 
+RUN sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 100M/' /etc/php/7.4/apache2/php.ini
+RUN sed -i 's/post_max_size = 8M/post_max_size = 100M/' /etc/php/7.4/apache2/php.ini
+
 # Fix timezone issue
 ENV TZ=Asia/Seoul
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
