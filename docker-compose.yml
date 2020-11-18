@@ -5,8 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: chicpro/apache-php
-    container_name: apache-php
+    image: chicpro/ubuntu2004-apache2-php74
+    container_name: ubuntu2004-apache2-php74
     ports:
       - "9001:80"
     restart: always
