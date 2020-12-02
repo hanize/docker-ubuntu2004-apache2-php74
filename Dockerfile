@@ -18,6 +18,9 @@ RUN a2enmod rewrite
 RUN sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 100M/' /etc/php/7.4/apache2/php.ini
 RUN sed -i 's/post_max_size = 8M/post_max_size = 100M/' /etc/php/7.4/apache2/php.ini
 
+RUN sed -i 's/export APACHE_RUN_USER=www-data/export APACHE_RUN_USER=bin/' /etc/apache2/envvars
+RUN sed -i 's/export APACHE_RUN_GROUP=www-data/export APACHE_RUN_GROUP=bin/' /etc/apache2/envvars
+
 # Fix timezone issue
 ENV TZ=Asia/Seoul
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
