@@ -19,7 +19,7 @@ services:
 
 # services:
 #   dev-web-1:
-#     image: botosys/dockerhub
+#     image: botosys/apache2-php74
 #     container_name: dangbu
 #     ports:
 #       - "1943:80"
