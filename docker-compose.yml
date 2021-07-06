@@ -13,3 +13,26 @@ services:
     volumes:
       - ./public:/var/www/html/
       - /tmp/mysql.sock:/var/run/mysqld/mysqld.sock
+      
+      
+# version: '3.9'
+
+# services:
+#   dev-web-1:
+#     image: botosys/dockerhub
+#     container_name: dangbu
+#     ports:
+#       - "1943:80"
+#     restart: always
+#     volumes:
+#       - ./dangbu:/var/www/html/
+#       - /tmp/mysql.sock:/var/run/mysqld/mysqld.sock
+#   dev-web-2:
+#     image: botosys/dockerhub
+#     container_name: est
+#     ports:
+#       - "1942:80"
+#     restart: always
+#     volumes:
+#       - ./est-mes:/var/www/html/
+#       - /tmp/mysql.sock:/var/run/mysqld/mysqld.sock
